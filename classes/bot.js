@@ -17,9 +17,9 @@ var log = logger.log.bind(logger);
 
 class Bot {
   constructor(task, config, taskId) {
+    const manager = new ProxyManager();
     this.config = config;
     this.task = task;
-    const manager = new ProxyManager();
     this.rotateProxy = manager.get_next_proxy();
     this.cookieJar = request.jar();
     logger.setTid(taskId);
