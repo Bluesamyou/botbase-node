@@ -30,4 +30,4 @@ class Bot {
   }
 }
 
-module.exports = Footlocker;
+module.exports = Bot;
